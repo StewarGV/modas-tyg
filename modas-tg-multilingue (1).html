@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modas T&G</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #d4af37;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #d4af37;
+    }
+    nav {
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 10px 0;
+      text-align: center;
+      border-bottom: 1px solid #d4af37;
+    }
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .section-divider {
+      border-top: 1px solid #d4af37;
+      margin: 40px 0;
+    }
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #25D366;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebd5a;
+    }
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .product-gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .language-switch {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .language-switch button {
+      background-color: #d4af37;
+      color: #000;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 0 5px;
+    }
+    .language-switch button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .espanol { display: none; }
+  </style>
+  <script>
+    function mudarIdioma(idioma) {
+      const pt = document.querySelectorAll('.portugues');
+      const es = document.querySelectorAll('.espanol');
+      pt.forEach(el => el.style.display = idioma === 'pt' ? 'block' : 'none');
+      es.forEach(el => el.style.display = idioma === 'es' ? 'block' : 'none');
+    }
+  </script>
+</head>
+<body onload="mudarIdioma('pt')">
+
+  <header>
+    <h1 class="portugues">Bem-vindo à Modas T&G!</h1>
+    <h1 class="espanol">¡Bienvenido a Modas T&G!</h1>
+    <p class="portugues">Descubra a moda que te define.</p>
+    <p class="espanol">Descubre la moda que te define.</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#loja">Loja</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="language-switch">
+    <button onclick="mudarIdioma('pt')">Português</button>
+    <button onclick="mudarIdioma('es')">Español</button>
+  </div>
+
+  <section id="inicio">
+    <div class="portugues">
+      <h2>Sobre Nós</h2>
+      <p>Somos uma loja online especializada em <strong>roupas urbanas, elegantes, casuais, femininas, masculinas, unissex e infantis</strong> com designs únicos e materiais de alta qualidade.</p>
+      <p>Oferecemos peças que combinam estilo, conforto e durabilidade, pensadas para o dia a dia e ocasiões especiais.</p>
+    </div>
+    <div class="espanol">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos una tienda online especializada en <strong>ropa urbana, elegante, casual, femenina, masculina, unisex y para niños</strong> con diseños únicos y materiales de alta calidad.</p>
+      <p>Ofrecemos prendas que combinan estilo, comodidad y durabilidad, pensadas para el día a día y ocasiones especiales.</p>
+    </div>
+    <div class="section-divider"></div>
+  </section>
+
+  <section id="sobre">
+    <div class="portugues">
+      <h2>Nossa História</h2>
+      <p><strong>Origem:</strong> Nascemos da paixão pela moda e do desejo de oferecer opções originais e acessíveis.</p>
+      <p><strong>Missão e Visão:</strong> Nossa missão é inspirar através da moda e nossa visão é nos tornarmos referência de estilo para nossos clientes.</p>
+      <p><strong>Valores:</strong> Comprometemo-nos com a qualidade, inovação e satisfação do cliente.</p>
+    </div>
+    <div class="espanol">
+      <h2>Nuestra Historia</h2>
+      <p><strong>Orígenes:</strong> Nacimos de la pasión por la moda y el deseo de ofrecer opciones originales y accesibles.</p>
+      <p><strong>Misión y Visión:</strong> Nuestra misión es inspirar a través de la moda y nuestra visión es convertirnos en referentes de estilo para nuestros clientes.</p>
+      <p><strong>Valores:</strong> Nos comprometemos con la calidad, la innovación y la satisfacción del cliente.</p>
+    </div>
+    <div class="section-divider"></div>
+  </section>
+
+  <section id="loja">
+    <div class="portugues">
+      <h2>Explore Nossa Loja</h2>
+      <p><strong>Detalhes dos produtos:</strong> Descrições precisas, tamanhos disponíveis, materiais e cuidados com a peça.</p>
+      <p><strong>Opções de compra:</strong> Processo de compra fácil e seguro, com múltiplos métodos de pagamento e opções de envio.</p>
+    </div>
+    <div class="espanol">
+      <h2>Explora Nuestra Tienda</h2>
+      <p><strong>Información detallada de productos:</strong> Descripciones precisas, tallas disponibles, materiales y cuidados de la prenda.</p>
+      <p><strong>Opciones de compra:</strong> Proceso de compra fácil y seguro, con múltiples métodos de pago y opciones de envío.</p>
+    </div>
+
+    <div class="product-gallery">
+      <img src="/mnt/data/WhatsApp Image 2025-06-21 at 3.36.17 PM.jpeg" alt="Sudadera Stitch Rosa">
+      <img src="/mnt/data/WhatsApp Image 2025-06-21 at 3.36.17 PM (1).jpeg" alt="Conjunto Marsala">
+      <img src="/mnt/data/WhatsApp Image 2025-06-21 at 3.36.17 PM (2).jpeg" alt="Sudadera Stitch Blanca">
+      <img src="/mnt/data/WhatsApp Image 2025-06-21 at 3.36.17 PM (3).jpeg" alt="Sudadera California">
+      <img src="/mnt/data/WhatsApp Image 2025-06-21 at 3.36.56 PM.jpeg" alt="Sudadera Milano">
+    </div>
+
+    <div class="section-divider"></div>
+  </section>
+
+  <section id="contato">
+    <div class="portugues">
+      <h2>Contato</h2>
+      <p>Tem dúvidas? Fale conosco pelas redes sociais ou pelo WhatsApp!</p>
+    </div>
+    <div class="espanol">
+      <h2>Contacto</h2>
+      <p>¿Tienes preguntas? ¡Contáctanos por nuestras redes sociales o por WhatsApp!</p>
+    </div>
+    <a class="whatsapp-button" href="https://wa.me/5214188244689" target="_blank">WhatsApp</a>
+  </section>
+
+</body>
+</html>
